@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'main_site',
     'products',
     'account',
+    'static',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Vanda.urls'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 TEMPLATES = [
     {
@@ -125,7 +128,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
